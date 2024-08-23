@@ -7,7 +7,7 @@ import Rating from "../components/Rating";
 import Message from "../components/Message";
 import Loader from "../components/Loader";
 import { useGetProductDetailsQuery } from "../slices/productApiSlice";
-import { addToCart } from '../slices/cartSlice.js'
+import { addToCart } from '../slices/cartSlice';
 
 const ProductScreen = () => {
     const { id: productId } = useParams();
@@ -22,7 +22,7 @@ const ProductScreen = () => {
     const addToCartHandler = () => {
         dispatch(addToCart({ ...product, qty }));
         navigate('/cart');
-    }
+    };
 
   return (
     <>
@@ -112,7 +112,6 @@ const ProductScreen = () => {
             </Col>
         </Row>
         ) }
-
         
     </>
   )
